@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _continueWithAdButtonObject;
     [SerializeField] private AudioSource _explosionSound;
     [SerializeField] private AudioSource _explosionAsteroidSound;
+    [SerializeField] private Button _pauseButton;
     public static int _countDestroyedAsteroids = 0;
     public static int _lives = 3;
     private Vector2 _startPosition = new Vector2(0, 24);
@@ -26,14 +28,14 @@ public class GameManager : MonoBehaviour
         _addWaitTime = 30;
     }
 
-    private void Update()
+    /*private void Update()
     {
         _addWaitTime -= Time.deltaTime;
         if (_addWaitTime <= 0)
         {
             GameOverMenu.continueIsTapped = false;
         }
-    }
+    }*/
     public void KillPlayer()
     {
         if (_lives == 3)
@@ -92,6 +94,7 @@ public class GameManager : MonoBehaviour
         Player.isAlive = false;
         Time.timeScale = 0;
         _gameOverMenu.SetActive(true);
+        _pauseButton.enabled = false;
         if (!GameOverMenu.continueIsTapped)
         {
             _continueWithAdButtonObject.SetActive(true);

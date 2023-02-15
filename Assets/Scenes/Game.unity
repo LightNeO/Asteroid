@@ -648,6 +648,7 @@ MonoBehaviour:
   _pauseButton: {fileID: 1726902475}
   _yesExit: {fileID: 1579574037}
   _noExit: {fileID: 2040578189}
+  _shootButton: {fileID: 74223748}
   _onOffSound: {fileID: 1534568680}
   _pauseMenu: {fileID: 885129272}
   _exitConfirmation: {fileID: 123560386}
@@ -667,7 +668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &164583844
 MonoBehaviour:
@@ -683,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _restartButton: {fileID: 751484165}
   _mainMenuButton: {fileID: 2098625962}
+  _pauseButton: {fileID: 1726902475}
   _continueWithAdButton: {fileID: 1031509332}
   _gameOverMenu: {fileID: 947407354}
   _pauseMenu: {fileID: 885129272}
@@ -806,6 +808,7 @@ MonoBehaviour:
   _continueWithAdButtonObject: {fileID: 1031509330}
   _explosionSound: {fileID: 164583847}
   _explosionAsteroidSound: {fileID: 164583848}
+  _pauseButton: {fileID: 1726902475}
 --- !u!82 &164583847
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8594,7 +8597,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215190601
 GameObject:
@@ -8639,7 +8642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1269037476
 GameObject:
@@ -10104,7 +10107,7 @@ Transform:
   - {fileID: 834474572}
   - {fileID: 1910220026}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902500173
 GameObject:
@@ -11092,7 +11095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6125504533378111699, guid: e23e7a6b3e3d4344a8e4be772a6980f7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6125504533378111699, guid: e23e7a6b3e3d4344a8e4be772a6980f7, type: 3}
       propertyPath: m_LocalPosition.x

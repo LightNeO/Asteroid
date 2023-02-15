@@ -11,7 +11,7 @@ public class AdOnContinue : MonoBehaviour
     //[SerializeField] private Player _player;
 
     //private string RewardedUnitId = "ca-app-pub-9787935308166164/1273837071";
-    private string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
+    private string RewardedUnitId = "ca-app-pub-9787935308166164/5313124555";
     private void OnEnable()
     {
         rewardedAd = new RewardedAd(RewardedUnitId);

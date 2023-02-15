@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _yesExit;
     [SerializeField] private Button _noExit;
+    [SerializeField] private Button _shootButton;
     [SerializeField] private Button _onOffSound;
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _exitConfirmation;
@@ -41,12 +42,14 @@ public class PauseMenu : MonoBehaviour
             isOpened = true;
             _pauseMenu.SetActive(true);
             GetComponent<AudioSource>().PlayOneShot(pauseSound);
+            _shootButton.enabled= false;
         }
         else if (isOpened)
         {
             Time.timeScale = 1;
             isOpened = false;
             _pauseMenu.SetActive(false);
+            _shootButton.enabled = true;
         }
         
     }
@@ -54,12 +57,14 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
+        _shootButton.enabled = true;
     }
 
     private void OpenMainMenu()
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+        _shootButton.enabled = true;
     }
 
     private void ShowExitConfirmation()
@@ -67,11 +72,13 @@ public class PauseMenu : MonoBehaviour
         _exitConfirmation.SetActive(true);
         Time.timeScale = 0;
         _pauseMenu.SetActive(false);
+        _shootButton.enabled = true;
     }
     private void CloseExitConfirmation()
     {
         _exitConfirmation.SetActive(false);
         Time.timeScale = 1;
+        _shootButton.enabled = true;
     }
     private void ExitGame()
     {

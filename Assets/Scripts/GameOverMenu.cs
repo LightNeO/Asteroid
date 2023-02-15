@@ -9,6 +9,7 @@ public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _mainMenuButton;
+    [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _continueWithAdButton;
     [SerializeField] private GameObject _gameOverMenu;
     [SerializeField] private GameObject _pauseMenu;
@@ -38,6 +39,7 @@ public class GameOverMenu : MonoBehaviour
         Time.timeScale = 1;
         _gameOverMenu.SetActive(false);
         SceneManager.LoadScene(1);
+        _pauseButton.enabled = true;
 
     }
 
@@ -48,11 +50,12 @@ public class GameOverMenu : MonoBehaviour
         Time.timeScale = 1;
         _gameOverMenu.SetActive(false);
         SceneManager.LoadScene(0);
-
+        _pauseButton.enabled = true;
     }
 
     private void ContinueWithAd()
     {
+        _pauseButton.enabled = true;
         _continueWithAdButtonObject.SetActive(false);
         continueIsTapped = true;
         //method for Ad displaying
